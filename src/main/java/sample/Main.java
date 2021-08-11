@@ -27,9 +27,6 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 1024, 700));
         primaryStage.show();
 
-        if(FirstWindowController.analyticalSystemLoadContentButton.isPressed()) {
-            primaryStage.getScene().setRoot(FXMLLoader.load(getClass().getResource("/fxmlToContent/analyticalSystem.fxml")));
-        }
     }
 
 

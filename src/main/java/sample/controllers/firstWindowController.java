@@ -5,14 +5,19 @@ import io.github.palexdev.materialfx.controls.MFXButton;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 import sample.controllers.contents.analyticalSystemContent;
 
 public class firstWindowController {
@@ -64,18 +69,48 @@ public class firstWindowController {
 
     @FXML
     void initialize() {
-        assert borderPaneContent != null : "fx:id=\"borderPaneContent\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert diagramLoadContentButton != null : "fx:id=\"diagramLoadContentButton\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert analyticalSystemLoadContentButton != null : "fx:id=\"analyticalSystemLoadContentButton\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert openCVValuesLoadControlButton != null : "fx:id=\"openCVValuesLoadControlButton\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert raspberryPIValuesLoadContentButton != null : "fx:id=\"raspberryPIValuesLoadContentButton\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert stateOfTheSystemLoadContentButton != null : "fx:id=\"stateOfTheSystemLoadContentButton\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert manualControlLoadContentButton != null : "fx:id=\"manualControlLoadContentButton\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert colorStyleSellector != null : "fx:id=\"colorStyleSellector\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert wtfStyle != null : "fx:id=\"wtfStyle\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert oceanBlueStyle != null : "fx:id=\"oceanBlueStyle\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert arashiStyle != null : "fx:id=\"arashiStyle\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert standartStyle != null : "fx:id=\"standartStyle\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
-        assert connectionStatusBar != null : "fx:id=\"connectionStatusBar\" was not injected: check your FXML file 'analyticalSystem.fxml'.";
+    }
+
+    public void SwitchToDiagram(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/diagram.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void SwitchToAnalyticalSystem(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/analyticalSystem.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void SwitchToOpenCRValues(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/openCRValues.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void SwitchToRaspberryPIValues(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/raspberryPIValues.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void SwitchToStateOfTheSystem(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/stateOfTheSystem.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void SwitchToManualControl(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/manualControl.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }
