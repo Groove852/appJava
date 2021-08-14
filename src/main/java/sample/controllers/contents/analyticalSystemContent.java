@@ -66,27 +66,6 @@ public class analyticalSystemContent {
 
     }
 
-    public void SwitchToDiagram(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/diagram.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void SwitchToOpenCRValues(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/openCRValues.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void SwitchToRaspberryPIValues(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/raspberryPIValues.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
     public void SwitchToStateOfTheSystem(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/stateOfTheSystem.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

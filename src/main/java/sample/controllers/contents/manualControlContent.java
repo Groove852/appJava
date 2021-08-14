@@ -18,7 +18,6 @@ import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
 public class manualControlContent {
-
     @FXML
     private ResourceBundle resources;
 
@@ -26,16 +25,7 @@ public class manualControlContent {
     private URL location;
 
     @FXML
-    private MFXButton diagramLoadContentButton;
-
-    @FXML
     private MFXButton analyticalSystemLoadContentButton;
-
-    @FXML
-    private MFXButton openCVValuesLoadControlButton;
-
-    @FXML
-    private MFXButton raspberryPIValuesLoadContentButton;
 
     @FXML
     private MFXButton stateOfTheSystemLoadContentButton;
@@ -60,35 +50,13 @@ public class manualControlContent {
 
     @FXML
     private Label connectionStatusBar;
-
     @FXML
     void initialize() {
 
     }
 
-    public void SwitchToDiagram(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/diagram.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
     public void SwitchToAnalyticalSystem(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/analyticalSystem.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void SwitchToOpenCRValues(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/openCRValues.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void SwitchToRaspberryPIValues(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/raspberryPIValues.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

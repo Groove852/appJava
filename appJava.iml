@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
- <component name="CheckStyle-IDEA-Module">
+  <component name="CheckStyle-IDEA-Module">
     <option name="configuration">
       <map />
     </option>
@@ -40,5 +40,22 @@
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:16" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:16" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:16" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.47" level="project" />
+    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.6.1" level="project" />
+    <orderEntry type="library" name="Maven: io.grpc:grpc-netty-shaded:1.15.1" level="project" />
+    <orderEntry type="library" name="Maven: io.grpc:grpc-core:1.15.1" level="project" />
+    <orderEntry type="library" name="Maven: io.grpc:grpc-context:1.15.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.7" level="project" />
+    <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.mojo:animal-sniffer-annotations:1.17" level="project" />
+    <orderEntry type="library" name="Maven: io.opencensus:opencensus-api:0.12.3" level="project" />
+    <orderEntry type="library" name="Maven: io.opencensus:opencensus-contrib-grpc-metrics:0.12.3" level="project" />
+    <orderEntry type="library" name="Maven: io.grpc:grpc-protobuf:1.15.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:20.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.api.grpc:proto-google-common-protos:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: io.grpc:grpc-protobuf-lite:1.15.1" level="project" />
+    <orderEntry type="library" name="Maven: io.grpc:grpc-stub:1.15.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:annotations-api:6.0.53" level="project" />
   </component>
 </module>

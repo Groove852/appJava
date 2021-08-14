@@ -7,6 +7,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -16,46 +17,6 @@
 <AnchorPane fx:id="anchorPaneContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.firstWindowController">
    <children>
       <BorderPane fx:id="borderPaneContent" prefHeight="701.0" prefWidth="1024.0">
-         <left>
-            <AnchorPane prefHeight="641.0" prefWidth="180.0" style="-fx-background-color: #666F80; -fx-opacity: 0.7;" BorderPane.alignment="CENTER">
-               <children>
-                  <VBox alignment="CENTER" layoutX="10.0" layoutY="72.0" prefHeight="360.0" prefWidth="160.0" spacing="30.0">
-                     <children>
-                        <MFXButton fx:id="diagramLoadContentButton" buttonType="RAISED" depthLevel="LEVEL1" onAction="#SwitchToDiagram" prefHeight="25.0" prefWidth="163.0" rippleAnimateShadow="true" text="Diagram">
-                           <font>
-                              <Font name="Cambria" size="12.0" />
-                           </font>
-                        </MFXButton>
-                        <MFXButton fx:id="analyticalSystemLoadContentButton" buttonType="RAISED" depthLevel="LEVEL1" onAction="#SwitchToAnalyticalSystem" prefHeight="25.0" prefWidth="163.0" rippleAnimateShadow="true" text="Analytical System">
-                           <font>
-                              <Font name="Cambria" size="12.0" />
-                           </font>
-                        </MFXButton>
-                        <MFXButton fx:id="openCVValuesLoadControlButton" buttonType="RAISED" depthLevel="LEVEL1" onAction="#SwitchToOpenCRValues" prefHeight="25.0" prefWidth="163.0" rippleAnimateShadow="true" text="OpenCR Values">
-                           <font>
-                              <Font name="Cambria" size="12.0" />
-                           </font>
-                        </MFXButton>
-                        <MFXButton fx:id="raspberryPIValuesLoadContentButton" buttonType="RAISED" depthLevel="LEVEL1" onAction="#SwitchToRaspberryPIValues" prefHeight="25.0" prefWidth="163.0" rippleAnimateShadow="true" text="Raspberry PI Values">
-                           <font>
-                              <Font name="Cambria" size="12.0" />
-                           </font>
-                        </MFXButton>
-                        <MFXButton fx:id="stateOfTheSystemLoadContentButton" buttonType="RAISED" depthLevel="LEVEL1" onAction="#SwitchToStateOfTheSystem" prefHeight="25.0" prefWidth="163.0" rippleAnimateShadow="true" text="State Of System">
-                           <font>
-                              <Font name="Cambria" size="12.0" />
-                           </font>
-                        </MFXButton>
-                        <MFXButton fx:id="manualControlLoadContentButton" buttonType="RAISED" depthLevel="LEVEL1" onAction="#SwitchToManualControl" prefHeight="25.0" prefWidth="163.0" rippleAnimateShadow="true" text="Manual Control">
-                           <font>
-                              <Font name="Cambria" size="12.0" />
-                           </font>
-                        </MFXButton>
-                     </children>
-                  </VBox>
-               </children>
-            </AnchorPane>
-         </left>
          <top>
             <AnchorPane prefHeight="40.0" prefWidth="1024.0" style="-fx-background-color: #FB6D6C; -fx-opacity: 1;" BorderPane.alignment="CENTER">
                <children>
@@ -80,7 +41,24 @@
             </AnchorPane>
          </top>
          <center>
-            <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="BOTTOM_CENTER">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="639.0" prefWidth="1022.0" spacing="100.0" style="-fx-background-color: #666F80; -fx-opacity: 0.7;">
+                     <children>
+                        <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="244.0" prefWidth="849.0" style="-fx-opacity: 1;" text="Enter IP of robotic system">
+                           <font>
+                              <Font name="Cambria" size="40.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ipRobotic" alignment="CENTER" prefHeight="25.0" prefWidth="519.0" />
+                        <MFXButton fx:id="connectionButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" depthLevel="LEVEL1" prefHeight="25.0" prefWidth="200.0" rippleAnimateShadow="true" text="Connect">
+                           <font>
+                              <Font name="Cambria" size="12.0" />
+                           </font>
+                        </MFXButton>
+                     </children>
+                  </VBox>
+               </content></ScrollPane>
          </center>
          <bottom>
             <HBox alignment="CENTER" prefHeight="20.0" prefWidth="971.0" spacing="300.0" BorderPane.alignment="CENTER">

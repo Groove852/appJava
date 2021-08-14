@@ -5,7 +5,6 @@ import io.github.palexdev.materialfx.controls.MFXButton;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,16 +25,7 @@ public class stateOfTheSystemContent {
     private URL location;
 
     @FXML
-    private MFXButton diagramLoadContentButton;
-
-    @FXML
     private MFXButton analyticalSystemLoadContentButton;
-
-    @FXML
-    private MFXButton openCVValuesLoadControlButton;
-
-    @FXML
-    private MFXButton raspberryPIValuesLoadContentButton;
 
     @FXML
     private MFXButton stateOfTheSystemLoadContentButton;
@@ -65,29 +55,8 @@ public class stateOfTheSystemContent {
     void initialize() {
 
     }
-    public void SwitchToDiagram(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/diagram.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
     public void SwitchToAnalyticalSystem(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/analyticalSystem.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void SwitchToOpenCRValues(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/openCRValues.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void SwitchToRaspberryPIValues(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxmlToContent/raspberryPIValues.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

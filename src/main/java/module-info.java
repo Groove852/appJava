@@ -4,6 +4,12 @@ module sample {
     requires transitive javafx.base;
     requires transitive javafx.graphics;
     requires MaterialFX;
+    requires protobuf.java;
+    requires grpc.stub;
+    requires grpc.core;
+    requires grpc.protobuf;
+    requires guava;
+    requires annotations.api;
 
     exports sample to javafx.graphics, javafx.fxml;
     opens sample to javafx.fxml;
